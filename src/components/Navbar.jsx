@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { ThemeContext } from '../context/ThemeContext';
 
 const Navbar = () => {
-  // Use context to get the current theme and the toggle function
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  // Check if context is undefined (should normally not happen if ThemeProvider is used correctly)
+  // Check if context is undefined
   if (theme === undefined || toggleTheme === undefined) {
     throw new Error('Navbar must be used within a ThemeProvider');
   }
